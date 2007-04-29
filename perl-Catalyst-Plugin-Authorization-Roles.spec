@@ -1,6 +1,6 @@
 %define	module	Catalyst-Plugin-Authorization-Roles
 %define	name	perl-%{module}
-%define version 0.04
+%define version 0.05
 %define release %mkrel 1
 
 %define _requires_exceptions perl(A
