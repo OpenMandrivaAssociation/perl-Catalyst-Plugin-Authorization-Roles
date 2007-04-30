@@ -33,15 +33,15 @@ granted. Otherwise, access is denied.
 %setup -q -n %{module}-%{version}
 
 %build
-%{__perl} Build.PL installdirs=vendor
-./Build
+perl Makefile.PL installdirs=vendor
+%make
 
 %check
-./Build test
+make test
 
 %install
 %{__rm} -rf %{buildroot}
-./Build install destdir=%buildroot
+%makeinstall_std
 
 %clean
 %{__rm} -rf %{buildroot}
