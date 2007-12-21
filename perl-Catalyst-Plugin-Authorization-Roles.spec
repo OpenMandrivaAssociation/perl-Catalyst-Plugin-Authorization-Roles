@@ -19,6 +19,7 @@ BuildRequires:	perl(Set::Object) >= 0
 BuildRequires:	perl(Test::Exception) >= 0
 BuildRequires:	perl(Test::MockObject) >= 1.01
 BuildArch:	noarch
+BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 Role based access control is very simple: every user has a list of
