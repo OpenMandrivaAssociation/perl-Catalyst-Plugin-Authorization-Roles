@@ -1,7 +1,7 @@
 %define	module	Catalyst-Plugin-Authorization-Roles
 %define	name	perl-%{module}
-%define version 0.05
-%define release %mkrel 3
+%define version 0.07
+%define release %mkrel 1
 
 %define _requires_exceptions perl(A
 
@@ -11,8 +11,8 @@ Version:	%{version}
 Release:	%{release}
 License:	GPL or Artistic
 Group:		Development/Perl
-Source0:	http://search.cpan.org/CPAN/authors/id/N/NU/NUFFIN/%{module}-%{version}.tar.bz2
 Url:		http://search.cpan.org/dist/%{module}
+Source:     http://www.cpan.org/modules/by-module/Catalyst/%{module}-%{version}.tar.gz
 BuildRequires:	perl(Catalyst) >= 5.49
 BuildRequires:	perl(Catalyst::Plugin::Authentication) >= 0.03
 BuildRequires:	perl(Set::Object) >= 0
