@@ -1,5 +1,5 @@
 %define	upstream_name	 Catalyst-Plugin-Authorization-Roles
-%define upstream_version 0.07
+%define upstream_version 0.08
 
 %define _requires_exceptions perl(A
 
