@@ -1,6 +1,4 @@
 %define	upstream_name	 Catalyst-Plugin-Authorization-Roles
-%define upstream_version 0.09
-
 %if %{_use_internal_dependency_generator}
 %define __noautoreq 'perl\\(A(.*)\\)'
 %else
@@ -8,14 +6,14 @@
 %endif
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	4
+Version:	0.09
+Release:	5
 
 Summary:	Role based authorization for Catalyst based on Catalyst::Plugin::Authentication
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Catalyst/%{upstream_name}-%{upstream_version}.tar.gz
+Url:		https://metacpan.org/dist/%{upstream_name}
+Source0:	http://www.cpan.org/modules/by-module/Catalyst/%{upstream_name}-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -35,7 +33,7 @@ If the user is a member in all of the required roles access is
 granted. Otherwise, access is denied.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL installdirs=vendor
@@ -64,9 +62,7 @@ make test
 
 * Sat Aug 01 2009 Jérôme Quelin <jquelin@mandriva.org> 0.70.0-1mdv2010.0
 + Revision: 406260
-- rebuild using %%perl_convert_version
-
-* Sun Sep 07 2008 Guillaume Rousse <guillomovitch@mandriva.org> 0.07-1mdv2009.0
+- rebuild using %0.09 Sun Sep 07 2008 Guillaume Rousse <guillomovitch@mandriva.org> 0.07-1mdv2009.0
 + Revision: 282125
 - new version
 
